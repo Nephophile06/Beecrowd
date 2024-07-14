@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    char employee_name[20];
+    gets(employee_name);
+    double salary, sales, total;
+    scanf("%lf", &salary);
+    scanf("%lf", &sales);
+    total = salary+(sales*15)/100;
+    printf("TOTAL = R$ %.2lf\n", total);
+    return 0;
+}
