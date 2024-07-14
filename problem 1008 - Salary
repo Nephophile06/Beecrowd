@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() 
+{
+    int e_n,h_n ;
+    float amount,salary;
+    scanf("%d",&e_n);
+    printf("NUMBER = %d\n",e_n);
+    scanf("%d",&h_n);
+    scanf("%f",&amount);
+    salary=(h_n*amount);
+    printf("SALARY = U$ %.2f\n",salary);
+    return 0;
+}
