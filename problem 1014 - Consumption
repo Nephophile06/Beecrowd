@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() 
+{
+    int X;
+    float Y,calc;
+    scanf("%d",&X);
+    scanf("%f",&Y);
+    calc=X/Y;
+    printf("%.3f km/l\n",calc);
+    return 0;
+}
