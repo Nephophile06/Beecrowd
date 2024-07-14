@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main ()
+{
+    double A=2,B=3,C=5,x,y,z,MEDIA;
+    scanf("%lf",&x);
+    scanf("%lf",&y);
+    scanf("%lf",&z);
+    MEDIA = (A*x+B*y+C*z)/(A+B+C) ;
+    printf("MEDIA = %.1lf\n",MEDIA);
+
+    return 0;
+}
