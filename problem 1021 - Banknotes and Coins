@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main() 
+{
+    double N;
+    int n, a_100, a, b_50, b, c_20, c, d_10, d, e_5, e, f_2, f, g_1, g, h_50, h, p_25, p, q_10, q, r_5, r;
+    scanf("%lf", &N);
+    n = N*100;
+    a_100 = n / 10000;
+    a = n % 10000;
+    b_50 = a / 5000;
+    b = a % 5000;
+    c_20 = b / 2000;
+    c = b % 2000;
+    d_10 = c / 1000;
+    d = c % 1000;
+    e_5 = d / 500;
+    e = d % 500;
+    f_2 = e / 200;
+    f = e % 200;
+    g_1 = f / 100;
+    g = f % 100;
+    h_50 = g / 50;
+    h = g % 50;
+    p_25 = h /25;
+    p = h % 25;
+    q_10 = p / 10;
+    q = p % 10;
+    r_5 = q / 5;
+    r = q % 5;
+    printf("NOTAS:\n%d nota(s) de R$ 100.00\n%d nota(s) de R$ 50.00\n%d nota(s) de R$ 20.00\n%d nota(s) de R$ 10.00\n%d nota(s) de R$ 5.00\n%d nota(s) de R$ 2.00\n", a_100, b_50, c_20, d_10, e_5, f_2);
+    printf("MOEDAS:\n%d moeda(s) de R$ 1.00\n%d moeda(s) de R$ 0.50\n%d moeda(s) de R$ 0.25\n%d moeda(s) de R$ 0.10\n%d moeda(s) de R$ 0.05\n%d moeda(s) de R$ 0.01\n", g_1, h_50, p_25, q_10, r_5, r);
+    return 0;
+}
