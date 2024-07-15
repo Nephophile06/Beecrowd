@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+    int N, a, a_100, b, b_50, c, c_20, d, d_10, e, e_5, f, f_2;
+    scanf("%d", &N);
+    a_100=N/100;
+    b=N%100;
+    b_50=b/50;
+    c=b%50;
+    c_20=c/20;
+    d=c%20;
+    d_10=d/10;
+    e=d%10;
+    e_5=e/5;
+    f=e%5;
+    f_2=f/2;
+    a=f%2;
+    printf("%d\n",N);
+    printf("%d nota(s) de R$ 100,00\n", a_100);
+    printf("%d nota(s) de R$ 50,00\n", b_50);
+    printf("%d nota(s) de R$ 20,00\n", c_20);
+    printf("%d nota(s) de R$ 10,00\n", d_10);
+    printf("%d nota(s) de R$ 5,00\n", e_5);
+    printf("%d nota(s) de R$ 2,00\n", f_2);
+    printf("%d nota(s) de R$ 1,00\n", a);
+    return 0;
+}
