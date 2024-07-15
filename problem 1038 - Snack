@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() 
+{
+    int X, Y;
+    float z, total;
+    scanf("%d %d", &X, &Y);
+    if (X == 1)
+        z = 4.00;
+    else if (X == 2)
+        z = 4.50;
+    else if (X == 3)
+        z = 5.00;
+    else if (X == 4)
+        z = 2.00;
+    else 
+        z = 1.50;
+    total = z * Y;
+    printf("Total: R$ %.2f\n", total);
+    return 0;
+}
