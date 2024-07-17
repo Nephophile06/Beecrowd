@@ -1,2 +1,2 @@
 # Beecrowd
-solution of some problems from beecrowd
+solution of some problems from beecrowd in c
