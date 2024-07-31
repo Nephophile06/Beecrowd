@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    int temp;
+    scanf("%d %d", &a, &b);
+    temp = b - a;
+    if (temp < 0)
+    {
+        temp = 24 + temp;
+    }
+    else if (temp == 0)
+    {
+        temp = 24;
+    }
+    else
+    {
+        temp = temp;
+    }
+    printf("O JOGO DUROU %d HORA(S)\n", temp);
+
+    return 0;
+}
