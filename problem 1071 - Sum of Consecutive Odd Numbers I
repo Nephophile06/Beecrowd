@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int X, Y;
+    scanf("%d", &X);
+    scanf("%d", &Y);
+
+    int temp, count = 0;
+    if (X > Y)
+    {
+        temp = X;
+        X = Y;
+        Y = temp;
+    }
+    else
+    {
+        X = X;
+        Y = Y;
+    }
+
+    for (int i = X; i < Y; i++)
+    {
+        if ( ((i%2) != 0) && (i != X) )
+        {
+            count = count + i;
+        }
+    }
+
+    printf("%d\n", count);
+
+    return 0;
+}
