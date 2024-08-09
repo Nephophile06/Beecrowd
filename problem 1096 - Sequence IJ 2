@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main()
+{
+    int i1 = 1, j1 = 7;
+    printf("I=%d J=%d\n", i1, j1);
+
+    while (j1 > 5)
+    {
+        i1 = i1;
+        j1 = j1 - 1;
+        printf("I=%d J=%d\n", i1, j1);
+    }
+
+    int  i2 = 3, j2 = 7;
+    printf("I=%d J=%d\n", i2, j2);
+
+    while (j2 > 5)
+    {
+        i2 = i2;
+        j2 = j2 - 1;
+        printf("I=%d J=%d\n", i2, j2);
+    }
+
+    int  i3 = 5, j3 = 7;
+    printf("I=%d J=%d\n", i3, j3);
+
+    while (j3 > 5)
+    {
+        i3 = i3;
+        j3 = j3 - 1;
+        printf("I=%d J=%d\n", i3, j3);
+    }
+
+    int  i4 = 7, j4 = 7;
+    printf("I=%d J=%d\n", i4, j4);
+
+    while (j4 > 5)
+    {
+        i4 = i4;
+        j4 = j4 - 1;
+        printf("I=%d J=%d\n", i4, j4);
+    }
+
+    int  i5 = 9, j5 = 7;
+    printf("I=%d J=%d\n", i5, j5);
+
+    while (j5 > 5)
+    {
+        i5 = i5;
+        j5 = j5 - 1;
+        printf("I=%d J=%d\n", i5, j5);
+    }
+
+    return 0;
+}
