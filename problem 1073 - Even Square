@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int N;
+    scanf("%d", &N);
+
+    char a = '^', b = '=';
+
+    for (int i = 1; i <= N; i++)
+    {
+        if ( (i % 2) == 0 )
+            printf("%d%c2 %c %d\n", i, a, b, (i*i));
+    }
+
+    return 0;
+}
