@@ -1,0 +1,117 @@
+#include <stdio.h>
+
+int main()
+{
+    int i1 = 0, j1 = 1;
+    printf("I=%d J=%d\n", i1, j1);
+
+    while (j1 < 3)
+    {
+        i1 = i1;
+        j1 = j1 + 1;
+        printf("I=%d J=%d\n", i1, j1);
+    }
+
+    float i2 = 0.2, j2 = 1.2;
+    printf("I=%.1f J=%.1f\n", i2, j2);
+
+    while (j2 < 3.2)
+    {
+        i2 = i2;
+        j2 = j2 + 1;
+        printf("I=%.1f J=%.1f\n", i2, j2);
+    }
+
+    float i3 = 0.4, j3 = 1.4;
+    printf("I=%.1f J=%.1f\n", i3, j3);
+
+    while (j3 < 3.4)
+    {
+        i3 = i3;
+        j3 = j3 + 1;
+        printf("I=%.1f J=%.1f\n", i3, j3);
+    }
+
+    float i4 = 0.6, j4 = 1.6;
+    printf("I=%.1f J=%.1f\n", i4, j4);
+
+    while (j4 < 2.6)
+    {
+        i4 = i4;
+        j4 = j4 + 1;
+        printf("I=%.1f J=%.1f\n", i4, j4);
+    }
+
+    float i5 = 0.8, j5 = 1.8;
+    printf("I=%.1f J=%.1f\n", i5, j5);
+
+    while (j5 < 2.8)
+    {
+        i5 = i5;
+        j5 = j5 + 1;
+        printf("I=%.1f J=%.1f\n", i5, j5);
+    }
+
+    int i6 = 1, j6 = 2;
+    printf("I=%d J=%d\n", i6, j6);
+
+    while (j6 < 4)
+    {
+        i6 = i6;
+        j6 = j6 + 1;
+        printf("I=%d J=%d\n", i6, j6);
+    }
+
+    float i11 = 1.2, j11 = 2.2;
+    printf("I=%.1f J=%.1f\n", i11, j11);
+
+    while (j11 < 3.2)
+    {
+        i11 = i11;
+        j11 = j11 + 1;
+        printf("I=%.1f J=%.1f\n", i11, j11);
+    }
+    printf("I=1.2 J=4.2\n");
+
+    float i22 = 1.4, j22 = 2.4;
+    printf("I=%.1f J=%.1f\n", i22, j22);
+
+    while (j22 < 4.4)
+    {
+        i22 = i22;
+        j22 = j22 + 1;
+        printf("I=%.1f J=%.1f\n", i22, j22);
+    }
+
+    float i33 = 1.6, j33 = 2.6;
+    printf("I=%.1f J=%.1f\n", i33, j33);
+
+    while (j33 < 3.6)
+    {
+        i33 = i33;
+        j33 = j33 + 1;
+        printf("I=%.1f J=%.1f\n", i33, j33);
+    }
+
+    float i44 = 1.8, j44 = 2.8;
+    printf("I=%.1f J=%.1f\n", i44, j44);
+
+    while (j44 < 4.8)
+    {
+        i44 = i44;
+        j44 = j44 + 1;
+        printf("I=%.1f J=%.1f\n", i44, j44);
+    }
+
+    int i = 2, j = 3;
+    printf("I=%d J=%d\n", i, j);
+
+    while (j < 5)
+    {
+        i = i;
+        j = j + 1;
+        printf("I=%d J=%d\n", i, j);
+    }
+
+    return 0;
+}
