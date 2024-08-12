@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    int x = 0, y = 0, z = 0;
+
+    while (a != 4)
+    {
+        scanf("%d", &a);
+
+        if ((a >= 1) && (a <= 4))
+        {
+            switch (a)
+            {
+                case 1: 
+                    x++;
+                    break;
+                case 2:
+                    y++;
+                    break;
+                case 3:
+                    z++;
+                    break;
+                default:
+                    break;
+            }
+        } 
+    }
+
+    printf("MUITO OBRIGADO\n");
+    printf("Alcool: %d\n", x);
+    printf("Gasolina: %d\n", y);
+    printf("Diesel: %d\n", z);
+
+    return 0;
+}
