@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int N;
+    scanf("%d", &N);
+
+    for (int i = 1; i <= N; i++)
+    {
+        int i1 = i;
+        int i2 = i1*i;
+        int i3 = i2*i;
+        printf("%d %d %d\n", i1, i2, i3);
+    }
+
+    return 0;
+}
