@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int X;
+    scanf("%d", &X);
+
+    int i1 = 0;
+    int i2 = 1;
+    int i3 = i1 + i2;
+    printf("%d %d", i1, i2);
+
+    for (int i = 2; i < X; i++)
+    {
+        printf(" ");
+        printf("%d", i3);
+        i1 = i2;
+        i2 = i3;
+        i3 = i1 + i2;
+    }
+
+    printf("\n");
+    return 0;
+}
