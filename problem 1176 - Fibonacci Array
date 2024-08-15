@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+    long long int T, arr[100];
+    scanf("%lld", &T);
+    long long int a, b, n;
+    long long int c = a + b;
+    
+    for (int i = 0; i < T; i++)
+    {
+        a = 0, b = 1;
+        scanf("%lld", &n);
+
+        for (int j = 0; j <= n; j++)
+        {
+            if (j == 0)
+                arr[0] = 0;
+            else if (j == 1)
+                arr[1] = 1;
+            else
+            {
+                c = a + b;
+                a = b;
+                b = c;
+                arr[j] = c;
+            }
+        }
+        
+        printf("Fib(%lld) = %lld\n", n, arr[n]);
+    }
+
+    return 0;
+}
