@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main()
+{
+    int X;
+    int arr1[5], arr2[5];
+    int odd = 0, even = 0;
+
+    for (int i = 0; i < 15; i++)
+    {
+        scanf("%d", &X);
+        
+        if (X % 2 == 0)
+        {
+            arr2[even] = X;
+            even++;
+            
+            if (even == 5)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    printf("par[%d] = %d\n", j, arr2[j]);
+                }
+                even = 0;
+            }
+        }
+
+        if (X % 2 == 1 || X % 2 == -1) 
+        {
+            arr1[odd] = X;   
+            odd++;
+
+            if (odd == 5)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    printf("impar[%d] = %d\n", j, arr1[j]);
+                }
+                odd = 0;
+            }
+        }
+    }
+
+    for (int i = 0; i < odd; i++)
+    {
+        printf("impar[%d] = %d\n", i, arr1[i]);
+    }
+
+    for (int i = 0; i < even; i++)
+    {
+        printf("par[%d] = %d\n", i, arr2[i]);
+    }
+
+    return 0;
+}
