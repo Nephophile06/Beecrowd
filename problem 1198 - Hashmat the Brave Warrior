@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    long long int M, N;
+    long long int temp; 
+    
+
+    while (scanf("%lld %lld", &M, &N) != EOF)
+    {
+        if (M > N)
+        {
+            temp = M;
+            M = N;
+            N = temp;
+        }
+        printf("%lld\n", (N-M));
+    }
+
+    return 0;
+}
