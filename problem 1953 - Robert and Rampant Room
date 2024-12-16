@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int a;
+    int EPR, EHD, INTRUSOS;
+
+    while (cin >> a)
+    {
+        EPR = 0, EHD = 0, INTRUSOS = 0;
+
+        for (int i = 0; i < a; i++)
+        {
+            int r;
+            string s;
+            cin >> r >> s;
+
+            if (s == "EPR")
+                EPR++;
+            else if (s == "EHD")
+                EHD++;
+            else 
+                INTRUSOS++;
+        }
+    
+        cout << "EPR:" << " " << EPR << endl;
+        cout << "EHD:" << " " << EHD << endl;
+        cout << "INTRUSOS:" << " " << INTRUSOS <<endl;
+    }
+    
+
+    return 0;
+}
