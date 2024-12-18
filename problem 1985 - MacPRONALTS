@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int t;
+    cin >> t;
+    int a, b;
+    double total = 0;
+
+    for (int i = 0; i < t; i++)
+    {
+        cin >> a >> b;
+
+        if (a == 1001)
+            total = total + (b * 1.50);
+        else if (a == 1002)
+            total = total + (b * 2.50);
+        else if (a == 1003)
+            total = total + (b * 3.50);
+        else if (a == 1004)
+            total = total + (b * 4.50);
+        else if (a == 1005)
+            total = total + (b * 5.50);
+    }
+
+    cout << fixed << setprecision(2) << total << endl;
+    return 0;
+}
