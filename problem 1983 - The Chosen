@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int t;
+    cin >> t;
+    long long int a, highest_a = -1;
+    float b, highest_b = -1.0;
+
+    for (int i = 0; i < t; i++)
+    {
+        cin >> a >> b;
+
+        if (b > highest_b)
+        {
+            highest_b = b;
+            highest_a = a;
+        }
+    }
+
+    if (highest_b >= 8.0)
+        cout << highest_a << endl;
+    else 
+        cout << "Minimum note not reached" << endl;
+   
+    return 0;
+}
