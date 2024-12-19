@@ -1,0 +1,22 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() 
+{
+    double V, D;
+
+    while (cin >> V >> D) 
+    {
+        double r = D / 2.0; 
+        double pi = 3.14;
+        double h = V / (pi * r * r);
+        double A = pi * r * r;
+
+        cout << fixed << setprecision(2);
+        cout << "ALTURA = " << h << endl;
+        cout << "AREA = " << A << endl;
+    }
+
+    return 0;
+}
