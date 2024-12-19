@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int a, b;
+    int interWins = 0, gremioWins = 0, draws = 0, total = 0;
+    int repeat;
+
+    do {
+        cin >> a >> b;
+        total++;
+
+        if (a > b) 
+            interWins++;
+        else if (b > a) 
+            gremioWins++;
+        else 
+            draws++;
+
+        cout << "Novo grenal (1-sim 2-nao)" << endl;
+        cin >> repeat;
+    } while (repeat == 1);
+
+    cout << total << " grenais" << endl;
+    cout << "Inter:" << interWins << endl;
+    cout << "Gremio:" << gremioWins << endl;
+    cout << "Empates:" << draws << endl;
+
+    if (interWins > gremioWins) 
+        cout << "Inter venceu mais" << endl;
+    else if (gremioWins > interWins) 
+        cout << "Gremio venceu mais" << endl;
+    else 
+        cout << "Nao houve vencedor" << endl;
+
+    return 0;
+}
