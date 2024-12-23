@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() 
+{
+    int totalTourists = 0, totalJeeps = 0;
+    string action;
+    int T;
+
+    while (true) 
+    {
+        cin >> action;
+        if (action == "ABEND") 
+        {
+            break;
+        }
+        cin >> T;
+
+        if (action == "SALIDA") 
+        {
+            totalJeeps++;
+            totalTourists += T;
+        } 
+        else if (action == "VUELTA") 
+        {
+            totalJeeps--;
+            totalTourists -= T;
+        }
+    }
+
+    cout << totalTourists << endl;
+    cout << totalJeeps << endl;
+
+    return 0;
+}
