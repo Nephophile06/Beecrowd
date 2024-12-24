@@ -1,0 +1,20 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() 
+{
+    double var1 = 234.345, var2 = 45.698;
+
+    cout << fixed << setprecision(6) << var1 << " - " << var2 << endl;
+    cout << fixed << setprecision(0) << var1 << " - " << var2 << endl;
+    cout << fixed << setprecision(1) << var1 << " - " << var2 << endl;
+    cout << fixed << setprecision(2) << var1 << " - " << var2 << endl;
+    cout << fixed << setprecision(3) << var1 << " - " << var2 << endl;
+    cout << scientific << setprecision(6) << var1 << " - " << var2 << endl;
+    cout << uppercase << var1 << " - " << var2 << endl;
+    cout << nouppercase << defaultfloat << var1 << " - " << var2 << endl;
+    cout << var1 << " - " << var2 << endl;
+
+    return 0;
+}
