@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() 
+{
+    string cpf;
+    while (cin >> cpf) 
+    { 
+        string xxx = cpf.substr(0, 3);   
+        string yyy = cpf.substr(4, 3);  
+        string zzz = cpf.substr(8, 3);  
+        string dd = cpf.substr(12, 2);  
+
+        cout << xxx << endl;
+        cout << yyy << endl;
+        cout << zzz << endl;
+        cout << dd << endl;
+    }
+
+    return 0;
+}
