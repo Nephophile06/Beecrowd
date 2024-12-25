@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+bool isPrime(int num) 
+{
+    if (num <= 1) 
+        return false;
+    for (int i = 2; i * i <= num; i++) 
+    {
+        if (num % i == 0) 
+            return false;
+    }
+
+    return true;
+}
+
+int main() 
+{
+    int N;
+    cin >> N;  
+    
+    int maxTwinPrimeX = -1, maxTwinPrimeY = -1;
+
+    for (int i = 2; i <= N - 2; i++) 
+    {
+        if (isPrime(i) && isPrime(i + 2)) 
+        {
+            maxTwinPrimeX = i;
+            maxTwinPrimeY = i + 2;
+        }
+    }
+
+    if (maxTwinPrimeX != -1 && maxTwinPrimeY != -1) 
+        cout << maxTwinPrimeX << " " << maxTwinPrimeY << endl;
+    else 
+        cout << "No twin primes found." << endl;
+        
+    return 0;
+}
