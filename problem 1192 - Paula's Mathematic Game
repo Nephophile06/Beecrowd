@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cctype>
+using namespace std;
+
+int main() 
+{
+    int n;
+    cin >> n; 
+
+    for (int i = 0; i < n; i++) 
+    {
+        string s;
+        cin >> s; 
+
+        int a1 = s[0] - '0';
+        char letter = s[1];
+        int a2 = s[2] - '0';
+
+        int result = 0;
+
+        if (a1 == a2) 
+            result = a1 * a2;
+        else if (islower(letter)) 
+            result = a1 + a2;
+        else if (isupper(letter)) 
+            result = a2 - a1;
+
+        cout << result << endl;
+    }
+
+    return 0;
+}
