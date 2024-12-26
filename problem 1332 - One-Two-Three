@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int similarityScore(const string& a, const string& b) 
+{
+    int count = 0;
+    for (size_t i = 0; i < a.size(); ++i) 
+    {
+        if (a[i] != b[i]) 
+            ++count;
+    }
+
+    return count;
+}
+
+int main() 
+{
+    int n;
+    cin >> n;
+    cin.ignore(); 
+    
+    string one = "one";
+    string two = "two";
+    string three = "three";
+
+    for (int i = 0; i < n; ++i) 
+    {
+        string word;
+        cin >> word;
+
+        if (word.size() == 3) 
+        {
+            if (similarityScore(word, one) <= 1) 
+                cout << 1 << endl;
+            else if (similarityScore(word, two) <= 1) 
+                cout << 2 << endl;
+        } 
+        
+        else if (word.size() == 5) 
+        {
+            if (similarityScore(word, three) <= 1) 
+                cout << 3 << endl;
+        }
+    }
+
+    return 0;
+}
