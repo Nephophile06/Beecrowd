@@ -1,0 +1,71 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct DictionaryEntry 
+{
+    string word;
+    int value;
+};
+
+int main() 
+{
+    int m, n;
+    cin >> m >> n;
+
+    DictionaryEntry dictionary[1000]; 
+    for (int i = 0; i < m; ++i) 
+    {
+        cin >> dictionary[i].word >> dictionary[i].value;
+    }
+
+    cin.ignore(); 
+    
+    for (int i = 0; i < n; ++i) 
+    {
+        string line, word;
+        long long salary = 0;
+
+        while (getline(cin, line) && line != ".") 
+        {
+            word = "";
+            for (char c : line) 
+            {
+                if (c == ' ') 
+                {
+                    if (!word.empty()) 
+                    {
+                        for (int j = 0; j < m; ++j) 
+                        {
+                            if (dictionary[j].word == word) 
+                            {
+                                salary += dictionary[j].value;
+                                break;
+                            }
+                        }
+                    }
+                    word = ""; 
+                } 
+                
+                else 
+                    word += c; 
+            }
+            
+            if (!word.empty()) 
+            {
+                for (int j = 0; j < m; ++j) 
+                {
+                    if (dictionary[j].word == word) 
+                    {
+                        salary += dictionary[j].value;
+                        break;
+                    }
+                }
+            }
+        }
+
+        cout << salary << endl;
+    }
+
+    return 0;
+}
