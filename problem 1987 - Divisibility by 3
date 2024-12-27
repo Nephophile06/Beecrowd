@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() 
+{
+    int n; 
+    string m; 
+
+    while (cin >> n >> m) 
+    { 
+        int sum_of_digits = 0;
+
+        for (char digit : m) 
+        {
+            sum_of_digits += digit - '0'; 
+        }
+
+        cout << sum_of_digits << " ";
+        if (sum_of_digits % 3 == 0) 
+            cout << "sim" << endl; 
+        else 
+            cout << "nao" << endl; 
+    }
+
+    return 0;
+}
