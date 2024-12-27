@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() 
+{
+    string N1, N2;
+    int testCase = 1; 
+
+    while (cin >> N1 >> N2) 
+    {
+        int count = 0;   
+        int lastPosition = -1; 
+
+        for (size_t i = 0; i <= N2.size() - N1.size(); ++i) 
+        {
+            if (N2.substr(i, N1.size()) == N1) 
+            {
+                count++;
+                lastPosition = i; 
+            }
+        }
+
+        cout << "Caso #" << testCase++ << ":" << endl;
+        if (count > 0) 
+        {
+            cout << "Qtd.Subsequencias: " << count << endl;
+            cout << "Pos: " << lastPosition + 1 << endl; 
+        } 
+        else 
+            cout << "Nao existe subsequencia" << endl;
+        cout << endl; 
+    }
+
+    return 0;
+}
