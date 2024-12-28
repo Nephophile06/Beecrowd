@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath> 
+using namespace std;
+
+int main() 
+{
+    int t;  
+    cin >> t;
+    
+    while (t--) 
+    {
+        int N;
+        cin >> N;
+        
+        int perfect = (int) sqrt(N);  
+        int result = N - perfect;     
+        cout << result << endl;
+    }
+    
+    return 0;
+}
