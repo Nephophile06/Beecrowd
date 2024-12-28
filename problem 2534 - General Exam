@@ -1,0 +1,26 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() 
+{
+    int N, Q;
+    int grades[100], position;
+
+    while (cin >> N >> Q) 
+    {
+        for (int i = 0; i < N; i++) 
+        {
+            cin >> grades[i];
+        }
+
+        sort(grades, grades + N, greater<int>());
+        while (Q--) 
+        {
+            cin >> position;
+            cout << grades[position - 1] << endl; 
+        }
+    }
+
+    return 0;
+}
