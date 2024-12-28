@@ -1,0 +1,29 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() 
+{
+    int N;
+    while (cin >> N) 
+    {
+        int ages[1000];  
+        
+        for (int i = 0; i < N; i++) 
+        {
+            cin >> ages[i];
+        }
+        
+        sort(ages, ages + N);
+        int level = 0;
+        
+        for (int i = 0; i < N / 2; i++) 
+        {
+            level += (ages[N - 1 - i] - ages[i]);
+        }
+        
+        cout << level << endl;
+    }
+    
+    return 0;
+}
