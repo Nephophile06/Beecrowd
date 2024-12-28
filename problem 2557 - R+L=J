@@ -1,0 +1,74 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() 
+{
+    string equation;
+    while (cin >> equation) 
+    {
+        int R = 0, L = 0, J = 0;
+        string r_part, l_part, j_part;
+        int i = 0;
+
+        while (equation[i] != '+') 
+        {
+            r_part += equation[i++];
+        }
+        i++; 
+
+        while (equation[i] != '=') 
+        {
+            l_part += equation[i++];
+        }
+        i++; 
+
+        while (i < equation.size()) 
+        {
+            j_part += equation[i++];
+        }
+
+        int r_value = 0, l_value = 0, j_value = 0;
+        if (r_part != "R") 
+        {
+            for (char c : r_part) 
+            {
+                r_value = r_value * 10 + (c - '0');
+            }
+        }
+
+        if (l_part != "L") 
+        {
+            for (char c : l_part) 
+            {
+                l_value = l_value * 10 + (c - '0');
+            }
+        }
+
+        if (j_part != "J") 
+        {
+            for (char c : j_part) 
+            {
+                j_value = j_value * 10 + (c - '0');
+            }
+        }
+
+        if (r_part == "R") 
+        {
+            R = j_value - l_value;
+            cout << R << endl;
+        } 
+        else if (l_part == "L") 
+        {
+            L = j_value - r_value;
+            cout << L << endl;
+        } 
+        else if (j_part == "J") 
+        {
+            J = r_value + l_value;
+            cout << J << endl;
+        }
+    }
+
+    return 0;
+}
