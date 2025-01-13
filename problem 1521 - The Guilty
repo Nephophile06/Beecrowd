@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    while (true) 
+    {
+        int N;
+        cin >> N;
+
+        if (N == 0) break; 
+
+        int students[51]; 
+        for (int i = 1; i <= N; ++i) 
+        {
+            cin >> students[i];
+        }
+
+        int K;
+        cin >> K;
+
+        while (students[K] != K) 
+        {
+            K = students[K];
+        }
+
+        cout << K << endl;
+    }
+
+    return 0;
+}
