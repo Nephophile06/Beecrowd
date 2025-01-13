@@ -1,0 +1,35 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() 
+{
+    int C;  
+    cin >> C;
+
+    while (C--) 
+    {
+        int N, sum = 0, aboveAverage = 0;
+        cin >> N;
+
+        int grades[N];
+
+        for (int i = 0; i < N; i++) 
+        {
+            cin >> grades[i];
+            sum += grades[i];
+        }
+
+        double average = sum / (double)N;
+
+        for (int i = 0; i < N; i++) 
+        {
+            if (grades[i] > average) 
+                aboveAverage++;
+        }
+
+        cout << fixed << setprecision(3) << (100.0 * aboveAverage / N) << "%" << endl;
+    }
+
+    return 0;
+}
