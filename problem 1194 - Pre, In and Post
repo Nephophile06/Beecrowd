@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string getPostOrder(string pre, string in) 
+{
+    if (pre.empty()) return ""; 
+    char root = pre[0];
+    int rootIndex = in.find(root);
+    
+    string leftInOrder = in.substr(0, rootIndex);
+    string rightInOrder = in.substr(rootIndex + 1);
+    
+    string leftPreOrder = pre.substr(1, leftInOrder.length());
+    string rightPreOrder = pre.substr(1 + leftInOrder.length());
+    
+    string leftPostOrder = getPostOrder(leftPreOrder, leftInOrder);
+    string rightPostOrder = getPostOrder(rightPreOrder, rightInOrder);
+    
+    return leftPostOrder + rightPostOrder + root;
+}
+
+int main() 
+{
+    int C;
+    cin >> C; 
+    
+    for (int i = 0; i < C; i++) 
+    {
+        int N;
+        string S1, S2;
+        cin >> N >> S1 >> S2; 
+        string postOrder = getPostOrder(S1, S2);
+        
+        cout << postOrder << endl;
+    }
+    
+    return 0;
+}
