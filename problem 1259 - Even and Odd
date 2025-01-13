@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() 
+{
+    int N;
+    cin >> N;
+
+    vector<int> evens, odds;
+
+    for (int i = 0; i < N; ++i) 
+    {
+        int num;
+        cin >> num;
+        if (num % 2 == 0) 
+            evens.push_back(num);
+        else 
+            odds.push_back(num);
+    }
+
+    sort(evens.begin(), evens.end());
+    sort(odds.rbegin(), odds.rend());  
+    for (int num : evens) 
+    {
+        cout << num << endl;
+    }
+
+    for (int num : odds) 
+    {
+        cout << num << endl;
+    }
+
+    return 0;
+}
