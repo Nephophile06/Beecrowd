@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() 
+{
+    int R, N, case_num = 1;
+
+    while (cin >> R >> N, R || N) 
+    {
+        cout << "Case " << case_num++ << ": ";
+
+        if (R <= N) 
+            cout << 0 << endl;
+        else 
+        {
+            int max_names = N * 27; 
+            if (R > max_names) 
+                cout << "impossible" << endl; 
+            else 
+            {
+                int required_suffixes = (R - N + N - 1) / N; 
+                cout << required_suffixes << endl;
+            }
+        }
+    }
+
+    return 0;
+}
