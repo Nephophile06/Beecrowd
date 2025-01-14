@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int C;
+    cin >> C;  
+    
+    while (C--)
+    {
+        long long N, M;
+        cin >> N >> M;  
+        long long min_radars = (N + M - 1) / M;
+        
+        cout << min_radars << endl;
+    }
+
+    return 0;
+}
