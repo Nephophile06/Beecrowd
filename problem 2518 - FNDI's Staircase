@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main() 
+{
+    int N, H, C, L;
+    while (cin >> N) 
+    {
+        cin >> H >> C >> L;
+        
+        double hypotenuse = sqrt(H * H + C * C);
+        double totalArea = N * hypotenuse * L;
+        double areaInSquareMeters = totalArea / 10000.0;
+
+        cout << fixed << setprecision(4) << areaInSquareMeters << endl;
+    }
+
+    return 0;
+}
