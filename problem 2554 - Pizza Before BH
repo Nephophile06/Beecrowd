@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() 
+{
+    int N, D;
+    while (cin >> N >> D) 
+    {  
+        string bestDate = "Pizza antes de FdI";  
+        for (int i = 0; i < D; ++i) 
+        {
+            string date;
+            cin >> date;  
+
+            bool allAvailable = true;
+            for (int j = 0; j < N; ++j) 
+            {
+                int availability;
+                cin >> availability;
+
+                if (availability == 0) 
+                    allAvailable = false;
+            }
+
+            if (allAvailable && bestDate == "Pizza antes de FdI") 
+                bestDate = date;  
+        }
+        cout << bestDate << endl; 
+    }
+    return 0;
+}
