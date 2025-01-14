@@ -1,0 +1,21 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() 
+{
+    int S, va, vb;
+
+    while (cin >> S >> va >> vb) 
+    {
+        if (va <= vb) 
+            cout << "impossivel" << endl;
+        else 
+        {
+            double time = static_cast<double>(S) / (va - vb);
+            cout << fixed << setprecision(2) << time << endl;
+        }
+    }
+
+    return 0;
+}
