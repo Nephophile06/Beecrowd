@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int N;
+    while (cin >> N) 
+    {  
+        int day = 0;
+        double maxAvgSpeed = 0.0;  
+        for (int i = 1; i <= N; ++i) 
+        {
+            int T, D;  
+            cin >> T >> D;
+            double avgSpeed = static_cast<double>(D) / T;
+
+            if (avgSpeed > maxAvgSpeed) 
+            {
+                maxAvgSpeed = avgSpeed;  
+                cout << i << endl;       
+            }
+        }
+    }
+    return 0;
+}
