@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() 
+{
+    string cpfInput;
+
+    while (cin >> cpfInput) 
+    {
+        int sum1 = 0, sum2 = 0;
+
+        for (int i = 0; i < 9; i++) 
+        {
+            int digit = cpfInput[i] - '0';
+            sum1 += digit * (i + 1);
+        }
+
+        int b1 = sum1 % 11;
+        if (b1 == 10) 
+            b1 = 0;
+
+        for (int i = 0; i < 9; i++) 
+        {
+            int digit = cpfInput[i] - '0';
+            sum2 += digit * (9 - i);
+        }
+
+        int b2 = sum2 % 11;
+        if (b2 == 10) 
+            b2 = 0;
+
+        cout << cpfInput.substr(0, 3) << "."
+             << cpfInput.substr(3, 3) << "."
+             << cpfInput.substr(6, 3) << "-"
+             << b1 << b2 << endl;
+    }
+
+    return 0;
+}
