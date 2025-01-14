@@ -1,0 +1,25 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() 
+{
+    int N, M;
+    while (cin >> N >> M) 
+    {  
+        int values[1000];    
+        for (int i = 0; i < N; ++i) 
+        {
+            cin >> values[i];
+        }
+
+        sort(values, values + N, greater<int>());
+        int loss = 0;
+        for (int i = 0; i < M; ++i) 
+        {
+            loss += values[i];
+        }
+        cout << loss << endl;  
+    }
+    return 0;
+}
