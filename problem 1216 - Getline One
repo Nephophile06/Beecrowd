@@ -1,0 +1,26 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+int main() 
+{
+    string name;
+    int distance, totalDistance = 0, count = 0;
+
+    while (getline(cin, name)) 
+    {
+        cin >> distance;
+        cin.ignore(); 
+        totalDistance += distance;
+        count++;
+    }
+
+    if (count > 0) 
+    {
+        double average = static_cast<double>(totalDistance) / count;
+        cout << fixed << setprecision(1) << average << endl;
+    }
+
+    return 0;
+}
