@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int N, M, L;
+
+    while (cin >> N >> M >> L) 
+    {
+        int mDeck[100][100];
+        int lDeck[100][100];
+
+        for (int i = 0; i < M; ++i) 
+        {
+            for (int j = 0; j < N; ++j) 
+            {
+                cin >> mDeck[i][j];
+            }
+        }
+ 
+        for (int i = 0; i < L; ++i) 
+        {
+            for (int j = 0; j < N; ++j) 
+            {
+                cin >> lDeck[i][j];
+            }
+        }
+ 
+        int CM, CL, A;
+        cin >> CM >> CL >> A;  
+        CM--;
+        CL--;
+        A--;
+ 
+        if (mDeck[CM][A] > lDeck[CL][A]) 
+            cout << "Marcos" << endl;
+        else if (mDeck[CM][A] < lDeck[CL][A]) 
+            cout << "Leonardo" << endl;
+        else 
+            cout << "Empate" << endl;
+    }
+
+    return 0;
+}
