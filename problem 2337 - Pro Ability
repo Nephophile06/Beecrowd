@@ -1,0 +1,53 @@
+#include <iostream>
+#include <cmath> 
+using namespace std;
+
+long long gcd(long long a, long long b) 
+{
+    while (b != 0) 
+    {
+        long long temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+int main() 
+{
+    long long prev = 2, curr = 3;  
+    int N;
+ 
+    while (cin >> N) 
+    {
+        if (N == 1) 
+        {
+            cout << "1/1\n";
+            continue;
+        }
+
+        if (N == 2) 
+        {
+            cout << "3/4\n";
+            continue;
+        }
+ 
+        long long x = 0;
+        for (int i = 3; i <= N; ++i) 
+        {
+            x = prev + curr;
+            prev = curr;
+            curr = x;
+        }
+ 
+        long long total = 1LL << N; 
+        long long gcd_value = gcd(x, total);
+        x /= gcd_value;
+        total /= gcd_value; 
+        cout << x << "/" << total << "\n"; 
+        prev = 2;
+        curr = 3;
+    }
+
+    return 0;
+}
