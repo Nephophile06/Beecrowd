@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() 
+{
+    int N, C, test_case = 1;
+
+    while (true) 
+    {
+        cin >> N >> C;
+        if (N == 0 && C == 0) 
+            break;
+
+        int weights[N], values[N];
+        for (int i = 0; i < N; i++) 
+        {
+            cin >> weights[i] >> values[i];
+        }
+ 
+        int dp[C + 1];
+        memset(dp, 0, sizeof(dp));
+
+        for (int i = 0; i < N; i++) 
+        {
+            for (int j = C; j >= weights[i]; j--) 
+            {
+                dp[j] = max(dp[j], dp[j - weights[i]] + values[i]);
+            }
+        }
+ 
+        cout << "Caso " << test_case++ << ": " << dp[C] << endl;
+    }
+
+    return 0;
+}
