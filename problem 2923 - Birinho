@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int T, A, W, C;
+
+    while (cin >> T >> A >> W >> C)
+    {
+        if (T == 0 && A == 0 && W == 0 && C == 0)
+            break;
+
+        int usedPercent = (A * 100) / T;
+        if (usedPercent >= C)
+            cout << "critical\n";
+        else if (usedPercent >= W)
+            cout << "warning\n";
+        else
+            cout << "OK\n";
+    }
+
+    return 0;
+}
