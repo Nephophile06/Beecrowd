@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    string a, b;
+    cin >> a >> b;
+
+    // Trim leading zeros for a
+    size_t start_a = a.find_first_not_of('0');
+    if (start_a == string::npos) {
+        a = "0";
+    } else {
+        a = a.substr(start_a);
+    }
+
+    // Trim leading zeros for b
+    size_t start_b = b.find_first_not_of('0');
+    if (start_b == string::npos) {
+        b = "0";
+    } else {
+        b = b.substr(start_b);
+    }
+
+    // Reverse the strings to process from least significant digit
+    reverse(a.begin(), a.end());
+    reverse(b.begin(), b.end());
+
+    string result;
+    int carry = 0;
+    int max_len = max(a.size(), b.size());
+
+    for (int i = 0; i < max_len; ++i) {
+        int digitA = (i < a.size()) ? (a[i] - '0') : 0;
+        int digitB = (i < b.size()) ? (b[i] - '0') : 0;
+        int sum = digitA + digitB + carry;
+        carry = sum / 10;
+        result.push_back((sum % 10) + '0');
+    }
+
+    if (carry != 0) {
+        result.push_back(carry + '0');
+    }
+
+    // Reverse to get the correct order
+    reverse(result.begin(), result.end());
+
+    cout << result << endl;
+
+    return 0;
+}
