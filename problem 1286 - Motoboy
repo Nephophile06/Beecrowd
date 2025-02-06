@@ -1,0 +1,29 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() 
+{
+    int N, P, time[21], pizzas[21], dp[31];
+
+    while (cin >> N, N != 0) 
+    {
+        cin >> P;
+
+        for (int i = 0; i < N; i++)
+            cin >> time[i] >> pizzas[i];
+
+        fill(dp, dp + P + 1, 0); 
+        for (int i = 0; i < N; i++) 
+        {
+            for (int j = P; j >= pizzas[i]; j--) 
+            {
+                dp[j] = max(dp[j], dp[j - pizzas[i]] + time[i]);
+            }
+        }
+
+        cout << dp[P] << " min." << endl;
+    }
+
+    return 0;
+}
