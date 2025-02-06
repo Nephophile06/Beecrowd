@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+double calculateArea(double m1, double m2, double m3) 
+{
+    double s = (m1 + m2 + m3) / 2;
+    
+    if (s <= m1 || s <= m2 || s <= m3) 
+        return -1; 
+    double area = (4.0 / 3.0) * sqrt(s * (s - m1) * (s - m2) * (s - m3));
+
+    return area;
+}
+
+int main() 
+{
+    double m1, m2, m3;
+    while (cin >> m1 >> m2 >> m3) 
+    {
+        double area = calculateArea(m1, m2, m3);
+        if (area == -1) 
+            cout << "-1.000" << endl;
+        else 
+            cout << fixed << setprecision(3) << area << endl;
+    }
+    
+    return 0;
+}
