@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+
+    int N, M;
+    while (cin >> N >> M) 
+    {
+        int juan_answers[100000]; 
+        int ricardinho_answers[100000]; 
+
+        for (int i = 0; i < N; i++) 
+        {
+            cin >> juan_answers[i];
+        }
+
+        for (int i = 0; i < M; i++) 
+        {
+            cin >> ricardinho_answers[i];
+        }
+
+        int j = 0; 
+        for (int i = 0; i < N; i++) 
+        {
+            if (juan_answers[i] == ricardinho_answers[j]) 
+                j++;
+            if (j == M) 
+                break;
+        }
+
+        if (j == M) 
+            cout << "sim" << endl;
+        else 
+            cout << "nao" << endl;
+    }
+    
+    return 0;
+}
