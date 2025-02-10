@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string next_term(const string& current) 
+{
+    string next = "";
+    int count = 1;
+
+    for (int i = 1; i < current.size(); ++i) 
+    {
+        if (current[i] == current[i - 1]) 
+            count++;
+        else 
+        {
+            next += to_string(count) + current[i - 1];
+            count = 1;
+        }
+    }
+    
+    next += to_string(count) + current[current.size() - 1];
+    return next;
+}
+
+int main() 
+{
+    int N;
+    while (cin >> N) 
+    {
+        string current = "3";  
+        for (int i = 1; i < N; ++i) 
+        {
+            current = next_term(current);
+        }
+        
+        cout << current << endl;
+    }
+    
+    return 0;
+}
