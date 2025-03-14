@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() 
+{
+    int C;
+    cin >> C;
+    
+    while (C--) 
+    {
+        int N;
+        cin >> N;
+        int x = static_cast<int>(sqrt(N));
+        int result = N - x;
+        cout << result << endl;
+    }
+    
+    return 0;
+}
