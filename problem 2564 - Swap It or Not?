@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+const int INF = 1e9;
+
+int main() 
+{
+    int N;
+    while (cin >> N) 
+    {
+        vector<pair<int, int>> rounds;
+        for (int i = 0; i < N - 1; ++i) 
+        {
+            int Pi, Ri;
+            cin >> Pi >> Ri;
+            rounds.emplace_back(Pi, Ri);
+        }
+
+        vector<int> current_dp(N + 1, INF);
+        current_dp[1] = 0;
+
+        for (auto &round : rounds) 
+        {
+            int Pi = round.first;
+            int Ri = round.second;
+            vector<int> next_dp(N + 1, INF);
+
+            for (int j = 1; j <= N; ++j) 
+            {
+                if (current_dp[j] == INF) 
+                    continue;
+
+                int new_j = (Ri == 1) ? Pi : j;
+                if (next_dp[new_j] > current_dp[j]) 
+                    next_dp[new_j] = current_dp[j];
+
+                int new_r = 1 - Ri;
+                new_j = (new_r == 1) ? Pi : j;
+                int new_flips = current_dp[j] + 1;
+
+                if (next_dp[new_j] > new_flips) 
+                    next_dp[new_j] = new_flips;
+            }
+            current_dp = move(next_dp);
+        }
+        cout << current_dp[N] << '\n';
+    }
+
+    return 0;
+}
