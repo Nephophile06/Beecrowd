@@ -20,6 +20,5 @@ int main()
         }
         printf("%lld\n", count1 + count2);
     }
-
     return 0;
 }
