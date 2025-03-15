@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() 
+{
+    int B, U;
+    while (cin >> B >> U) 
+    {
+        if (B == -1 && U == -1) 
+            break;
+        if (B < 0 || B > 150 || U < 1 || U > 150) 
+        {
+            cout << "Invalid input" << endl;
+            continue;
+        }
+
+        int doorsToPass = abs(B - U);
+        if (doorsToPass > 0) 
+            cout << doorsToPass-1 << endl;
+        else
+            cout << 0 << endl;
+    }
+
+    return 0;
+}
