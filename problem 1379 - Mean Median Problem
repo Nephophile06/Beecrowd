@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cmath>  
+using namespace std;
+
+int main() 
+{
+    while (true) 
+    {
+        long long A, B;
+        cin >> A >> B;
+        if (A == 0 && B == 0) 
+            break;
+
+        long long C1 = 2 * A - B;
+        bool valid1 = (C1 <= A);
+
+        double c2_double = (A + B) / 2.0;
+        long long C2 = (long long)ceil(c2_double);
+        bool valid2 = (C2 >= A && C2 <= B);
+
+        long long C3 = 2 * B - A;
+        bool valid3 = (C3 >= B);
+        long long answer = 1e15;  
+
+        if (valid1 && C1 < answer) 
+            answer = C1;
+        if (valid2 && C2 < answer) 
+            answer = C2;
+        if (valid3 && C3 < answer) 
+            answer = C3;
+
+        cout << answer << "\n";
+    }
+
+    return 0;
+}
