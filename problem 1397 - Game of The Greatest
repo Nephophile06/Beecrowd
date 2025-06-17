@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int N;    
+    while (cin >> N && N != 0) 
+    {
+        int scoreOg = 0, scoreChild = 0;
+        for (int i = 0; i < N; ++i) 
+        {
+            int A, B;
+            cin >> A >> B;
+
+            if (A > B)
+                scoreOg++;
+            else if (B > A)
+                scoreChild++;
+        }
+
+        cout << scoreOg << " " << scoreChild << endl;
+    }
+
+    return 0;
+}
