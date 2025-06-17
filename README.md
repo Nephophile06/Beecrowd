@@ -34,7 +34,7 @@ If you're learning programming or preparing for competitive programming:
 While this is a personal repository- contributions, feedback, or suggestions are always welcome. Feel free to open an issue or a pull request.
 
 ## 📬 Contact
-If you'd like to connect or collaborate, feel free to reach out via [e-mail](anikabintaazad24@gmail.com).
+If you'd like to connect or collaborate, feel free to reach out via [GitHub Profile](https://github.com/YourUsername) or email me at: **anikabintaazad24@gmail.com**
 
 ---
 **Disclaimer**: These solutions are intended for learning and reference only. Please do not copy and submit them directly to any platform.
