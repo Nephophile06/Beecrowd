@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int T;
+    cin >> T;
+
+    while (T--) 
+    {
+        string input;
+        cin >> input;
+
+        int N = 0, K = 0;
+        for (char ch : input) 
+        {
+            if (ch >= '0' && ch <= '9') 
+            {
+                N = N * 10 + (ch - '0');
+            } 
+             
+            else if (ch == '!') 
+            {
+                K++;
+            }
+        }
+
+        long long result = 1;
+        for (int i = N; i > 0; i -= K) 
+        {
+            result *= i;
+        }
+
+        cout << result << endl;
+    }
+
+    return 0;
+}
