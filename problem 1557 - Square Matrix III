@@ -1,0 +1,39 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() 
+{
+    int n;
+    while (cin >> n && n != 0) 
+    {
+        int matrix[15][15];
+        for (int i = 0; i < n; ++i) 
+        {
+            for (int j = 0; j < n; ++j) 
+            {
+                matrix[i][j] = 1 << (i + j); 
+            }
+        }
+        
+        int width = 1;
+        if (n > 0) 
+        {
+            width = to_string(matrix[n-1][n-1]).length();
+        }
+        
+        for (int i = 0; i < n; ++i) 
+        {
+            for (int j = 0; j < n; ++j) 
+            {
+                cout << setw(width) << matrix[i][j];
+                if (j < n - 1) 
+                    cout << " ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
+    
+    return 0;
+}
