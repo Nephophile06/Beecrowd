@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    double A, B, C;
+    const double PI = 3.141592654;
+
+    while (cin >> A >> B >> C) 
+    {
+        double radians = A * PI / 180.0;
+        double height = tan(radians) * B + C;
+        double lights = height * 5;
+        cout << fixed << setprecision(2) << lights << endl;
+    }
+
+    return 0;
+}
