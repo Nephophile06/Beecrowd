@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int x[5], y[5];
+    for (int i = 0; i < 5; i++) 
+        cin >> x[i];
+    for (int i = 0; i < 5; i++) 
+        cin >> y[i];
+
+    bool compatible = true;
+    for (int i = 0; i < 5; i++) 
+    {
+        if (x[i] + y[i] != 1) {
+            compatible = false;
+            break;
+        }
+    }
+
+    cout << (compatible ? 'Y' : 'N') << endl;
+    return 0;
+}
