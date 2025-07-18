@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int T;
+    cin >> T;
+
+    while (T--) 
+    {
+        long long D;
+        int I, B;
+        cin >> D >> I >> B;
+
+        vector<int> prices(I);
+        for (int i = 0; i < I; i++) {
+            cin >> prices[i];
+        }
+
+        int maxCakes = 0;
+        for (int i = 0; i < B; i++) 
+        {
+            int Q;
+            cin >> Q;
+
+            long long cakeCost = 0;
+            for (int j = 0; j < Q; j++) 
+            {
+                int ingredientIndex, amountNeeded;
+                cin >> ingredientIndex >> amountNeeded;
+                cakeCost += 1LL * prices[ingredientIndex] * amountNeeded;
+            }
+
+            if (cakeCost > 0) {
+                int possibleCakes = D / cakeCost;
+                maxCakes = max(maxCakes, possibleCakes);
+            }
+        }
+
+        cout << maxCakes << endl;
+    }
+
+    return 0;
+}
