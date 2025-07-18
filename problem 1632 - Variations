@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isLeetChar(char ch) {
+    ch = tolower(ch);
+    return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 's';
+}
+
+int main() 
+{
+    int T;
+    cin >> T;
+
+    while (T--) 
+    {
+        string s;
+        cin >> s;
+        long long variations = 1;
+    
+        for (char ch : s) 
+        {
+            if (isLeetChar(ch)) 
+                variations *= 3;
+            else 
+                variations *= 2;
+        }
+
+        cout << variations << endl;
+    }
+    
+    return 0;
+}
