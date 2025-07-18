@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    long long X, Y;
+    while (cin >> X >> Y) 
+    {
+        long long g = __gcd(X, Y);
+        long long result = 2 * (X + Y) / g;
+        cout << result << endl;
+    }
+    return 0;
+}
