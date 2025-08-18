@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    vector<string> mat(4);
+    for (int i = 0; i < 4; i++) 
+        cin >> mat[i];
+
+    int cols = mat[0].size(); 
+    auto getCol = [&](int j) {
+        int val = 0;
+        for (int i = 0; i < 4; i++) {
+            val = val * 10 + (mat[i][j] - '0');
+        }
+        return val;
+    };
+
+    int F = getCol(0);
+    int L = getCol(cols - 1);
+
+    string ans;
+    for (int j = 1; j < cols - 1; j++) {
+        int Mi = getCol(j);
+        int Ci = (1LL * F * Mi + L) % 257;
+        ans.push_back((char)Ci);
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
