@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    long long M, N;
+    while (cin >> M >> N) 
+    {
+        if (M == 0 && N == 0) 
+            break;
+
+        long long sum = M + N;
+        string s = to_string(sum);
+
+        string result = "";
+        for (char c : s) {
+            if (c != '0') result += c;
+        }
+
+        cout << result << "\n";
+    }
+
+    return 0;
+}
