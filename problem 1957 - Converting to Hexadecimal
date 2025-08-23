@@ -1,0 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    long long V;
+    cin >> V;
+    cout << uppercase << hex << V << endl;
+    return 0;
+}
